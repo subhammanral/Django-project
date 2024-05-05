@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block title %}THIS IS CONTACT{% endblock title %}
+{% block body %}
+<div class="container-fluid px-0">
+  <img src="/static/8.jpeg" class="d-block w-100" alt="" />
+</div>
+
+<div class="" style="text-align: center; ">
+  <!--$--><!--/$-->
+  <div data-item-id="ieD2yKp1nCdJhM62yXo8Q" class="flex flex-col px-[16px] md:px-[25px] w-full mx-auto max-w-[1050px]">
+    <div class="flex flex-col flex-1 justify-end py-[20px] md:py-[30px] pb-0 md:pb-0">
+      <h1 class="mt-[4px] break-words">Contact</h1>
+      <h5>
+        You can find our switchboard number below. Please scroll down to contact
+        the responsible team for more specific questions.
+      </h5>
+    </div>
+  </div>
+  <div class="w-full mx-auto max-w-[1050px] px-[16px] md:px-[25px] mb-[30px] richtext"
+    data-item-id="_axhmY16SUIsAum9jV2mB">
+    <p><br /></p>
+    <h2 dir="ltr"><span style="white-space: pre-wrap">Shoes Store</span></h2>
+    <p dir="ltr">
+      <span style="white-space: pre-wrap">World of Sports</span><br /><span><span
+          style="white-space: pre-wrap">DDUC</span>
+        <br><span style="white-space: pre-wrap">INDIA</span>
+    </p>
+  </div>
+  <div
+    class="w-full mx-auto max-w-[1600px] mb-[30px] flex flex-wrap flex-col md:flex-row gap-x-3.5 gap-y-3.5 px-[16px] md:px-[25px]">
+    <div
+      class="flex-1 pb-[30px] flex flex-col items-center justify-end relative bg-cover bg-center bg-banner pt-[50px] md:pt-[60px]">
+      <h2 class="mb-[2px] relative text-center">Customer service</h2>
+      <p class="font-bold relative text-center">
+        Do you have questions about our products or your order? Our customer
+        hotline can help.
+      </p>
+
+      <div class="container py-4" style="align-items: center;">
+        <form method="post" action="/contact">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name ="name" placeholder="Enter your name">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter your Email">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="phone">Phone Number</label>
+            <input class="form-control" id="phone" name="phone" placeholder="Enter your Phone Number">
+          </div>
+          <div class="mb-3">
+            <label for="desc">Describe </label>
+            <textarea class="form-control" id="desc" name="desc" row="3" placeholder="Enter your desc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+      </div>
+      {% endblock body %}
